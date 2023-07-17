@@ -1,0 +1,87 @@
+users:
+  path: /users
+  controller: App\Controller\UserController::users # users est la fonction qui recupere toutes nos données
+  methods: GET
+
+user:
+  path: /user/{id}
+  controller: App\Controller\UserController::user  # user est une fonction qui recupere un user
+  methods: GET
+
+adduser:
+  path: /user/add
+  controller: App\Controller\UserController::addUser
+  methods: POST
+
+
+addImage:
+  path: /commercial/add/image/{id}  #on recupere l'id d'user
+  controller: App\Controller\UserController::ajouterImage
+  methods: POST
+
+addcommerce:
+  path: /commercial/add #on recupere l'id d'user
+  controller: App\Controller\UserController::addCommercial
+  methods: POST
+
+avatar:
+  path: /avatar/{img} #avatar est une fonction qui recupere l'image
+  controller: App\Controller\UserController::avatar  
+  methods: GET
+
+
+updateuser:
+  path: /user/update/{id}
+  controller: App\Controller\UserController::updateUser 
+  methods: POST
+
+
+app_api_login:
+  path: /api/login
+  controller: App\Controller\UserLoginController::login
+  methods: POST
+
+
+app_api_logout:
+  path: /api/logout
+  controller: App\Controller\UserLoginController::logout
+  methods: GET
+
+app_api_login_check:
+  path: /api/login/check
+  controller: App\Controller\UserLoginController::check
+  methods: GET
+
+addresses:
+  path: /addresses
+  controller: App\Controller\AddressController::addresses 
+  methods: GET
+
+  
+addaddress:
+  path: /address/add
+  controller: App\Controller\AddressController::addAddress
+  methods: POST
+
+  
+imprimerUser:
+  path: /imprimer/user/{id}
+  controller: App\Controller\ImprimeController::ImprimeUser 
+  methods: GET
+
+
+commercial:
+  path: /commercial
+  controller: App\Controller\CommercialController::getCommercial
+  methods: GET
+
+commerciaux:
+  path: /commerciaux
+  controller: App\Controller\CommercialController::getCommerciaux
+  methods: GET
+
+Updatecommerciaux:
+  path: /commerical/update/{id}
+  controller: App\Controller\CommercialController::updateCommercial
+  methods: POST
+   

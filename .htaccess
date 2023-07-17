@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+#SetEnv APP_ENV prod
+#SetEnv DATABASE_URL "mysql://root:vagrant@127.0.0.1:3306/test"
+
+<files *.sh>
+  order deny,allow
+  deny from all
+</files>
+
+<files *.sql>
+  order deny,allow
+  deny from all
+</files>
